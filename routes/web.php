@@ -5,10 +5,11 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListBarangController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardKrsController;
+use App\Http\Controllers\MataKuliahController;
 
 Route::get('/', [HomeController::class, 'index'])->middleware('auth');
 Route::get('/contact', [HomeController::class, 'contact']);
-
+Route::get('/matkul', [MataKuliahController::class, 'index']);
 Route::get('/welcome', function () {
    return view('welcome');
 });
