@@ -26,4 +26,10 @@ Route::prefix('admin')->group(function () {
     });
 });
 
-Route::get('/listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan']);
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::get('/dashboard', [DashboardKrsController::class, 'index'])->name('dashboard');
+    Route::post('/login', [LoginController::class, 'login']);
+});
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
