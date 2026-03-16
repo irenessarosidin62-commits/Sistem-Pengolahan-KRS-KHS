@@ -13,7 +13,6 @@ class DashboardKrsController extends Controller
      */
     public function index()
     {
-        // --- DATA CONTOH MAHASISWA ---
         // Nanti bisa diambil dari session atau database berdasarkan user yang login
         $mahasiswa = [
             'nim' => '3312501007',

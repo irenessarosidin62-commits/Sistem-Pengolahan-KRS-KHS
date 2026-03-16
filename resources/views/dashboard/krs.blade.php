@@ -41,7 +41,7 @@
         
         .card-header i {
             margin-right: 10px;
-            color: #667eea; /* Warna aksen */
+            color: #667eea;
         }
 
         .table {
